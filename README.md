@@ -1,2 +1,2 @@
 # AWS
-AWS projects and learnings
+In this repo, I an adding all the projects and learnings used to learn AWS
