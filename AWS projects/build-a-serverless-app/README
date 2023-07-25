@@ -1,5 +1,7 @@
 The goal of this project is to create a well-integrated serverless app using various AWS services to build a powerful and scalable application architecture.
 
+![Serverless Architecture](https://github.com/Spidey44/AWS/assets/83247073/c3aef0b4-1547-4892-8ee5-09f704c75999)
+
 Step 1: Build a Static Website with Web Form on Amazon S3
 * Description: Create a static website using HTML, CSS, and JavaScript and host it on Amazon S3. Include a web form to collect user input.
 * Benefit: Hosting a static website on S3 is cost-effective and scalable. It allows easy deployment and distribution of the website across the globe.
