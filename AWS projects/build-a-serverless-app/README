@@ -59,7 +59,6 @@ APPLICATION BUILT IN 5 PARTS
 Part 1 - Create an SQS queue and add a message manually. This will trigger a productVisitsDataHandler Lambda function that will both create an item in the DynamoDB table and add a record to the CloudWatch log.
 ![Serverless P1](https://github.com/Spidey44/AWS/assets/83247073/f86bf959-98c6-4b9a-bace-4961c601aaf9)
 
-
 Part 2 - Create a DynamoDB Stream from the table previously created. A Lambda function will read the items from the stream and then write the information into an S3 bucket serving as a data lake. A CloudWatch Log will capture all the records in case an error occurs.
 ![Serverless P2](https://github.com/Spidey44/AWS/assets/83247073/6c721f29-8501-4fd7-9d0e-4e5a1f8039cd)
 
