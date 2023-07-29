@@ -52,22 +52,23 @@ Step 11: Monitor S3 Bucket Changes with CloudTrail
 
 Step 12: Notify Users of S3 Bucket Changes via SNS Topic
 * Description: Configure an EventBridge rule to trigger an SNS topic notification when specific S3 bucket changes are detected by CloudTrail.
-* Benefit: SNS notifications provide a reliable way to alert users about critical S3 bucket changes in real-time, ensuring timely actions and responses.
+* Benefit: SNS notifications provide a reliable way to alert users about critical S3 bucket changes in real time, ensuring timely actions and responses.
 
 APPLICATION BUILT IN 5 PARTS
 
 Part 1 - Create an SQS queue and add a message manually. This will trigger a productVisitsDataHandler Lambda function that will both create an item in the DynamoDB table and add a record to the CloudWatch log.
+![Serverless P1](https://github.com/Spidey44/AWS/assets/83247073/f86bf959-98c6-4b9a-bace-4961c601aaf9)
 
 
 Part 2 - Create a DynamoDB Stream from the table previously created. A Lambda function will read the items from the stream and then write the information into an S3 bucket serving as a data lake. A CloudWatch Log will capture all the records in case an error occurs.
-
+![Serverless P2](https://github.com/Spidey44/AWS/assets/83247073/6c721f29-8501-4fd7-9d0e-4e5a1f8039cd)
 
 Part 3 - Create the Static website with S3 that speaks to API Gateway with Lambda proxy function that will send the message created in Part 1. Test by completing the form http://product-visits-webform-2023.s3-website-us-east-1.amazonaws.com/ and make sure the item has been added to the DynamoDB table and the S3 datalake.
-
+![Serverless P3](https://github.com/Spidey44/AWS/assets/83247073/10278163-dd1a-48aa-bcfe-3ce61cefded6)
 
 Part 4 - Add the ability to track config changes to our resources. Enable CloudTrail to log all API calls made in relation to the bucket. An SNS topic will listen to any config change event and send a notification.
-
+![Serverless P4](https://github.com/Spidey44/AWS/assets/83247073/d2e7c092-c8f4-45b4-b1f6-23769cd05689)
 
 Part 5 - Amazon Athena will be used along with AWS Glue Catalog to perform SQL queries on the information put on the S3 Data Lake Bucket.
-
+![Serverless P5](https://github.com/Spidey44/AWS/assets/83247073/1eb86fef-0d3a-477e-81bf-421fac4afa07)
 
