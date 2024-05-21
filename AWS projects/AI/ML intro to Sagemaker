@@ -1,1 +1,39 @@
+0- Sagemaker example public repo
+	=> https://github.com/aws/amazon-sagemaker-examples/tree/main 1- Select a Sagemaker built-in image classifier 
+	=> SageMaker/training/Training jobs/ Create Training jobs
+
+
+2- Provided hyperparameters for it
+	=> SageMaker/training/Training jobs/ Create Training jobs
+
+
+3- Attached training and Validation Data
+	=> s3://aws-mls-c01/cifar10/train/cifar10_train.rec
+	=> 'plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'
+	=> s3://aws-mls-c01/cifar10/validation/cifar10_val.rec
+
+
+4- Check the metrics accuraccy/
+	=> SageMaker/Training jobs/ Image-classifier-demo/View Mrtrics/View logs
+
+
+5- Train the model and save the output in S3
+	=> S3 bucket check the tar.jz fle
+
+
+6- Register model with Sagemaker
+	=> SageMaker/Models/CreateModel
+
+
+7- Create an enpoint for image classification
+	=> SageMaker/Endpoints/CreateEndpointConfigutation/CreateEndpoint
+	Private: Default vs Public: API gateway, Lambdafunction 
+
+
+8- Test the model by making inference on the endpoint
+	=> Create a notebook instance then clone repo then lauch Sagemaker file
+	=> notebook: https://github.com/learn-mikegchambers-com/aws-mls-c01/tree/master/8-SageMaker/Getting-Started-Image-Classification
+	=> aws-mls-c01/8-SageMaker/Getting-Started-Image-Classification/SageMaker-Inference-Test.ipynb
+
+￼
 
